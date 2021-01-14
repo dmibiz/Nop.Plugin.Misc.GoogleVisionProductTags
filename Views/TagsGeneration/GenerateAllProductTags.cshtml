@@ -1,0 +1,16 @@
+﻿@inject Nop.Core.IWebHelper webHelper
+
+<form asp-controller="GoogleVisionProductTags" asp-action="Configure" method="post">
+    <button type="button" name="importexcel" class="btn bg-blue" data-toggle="modal" data-target="#googlevision-product-tags-confirmation-modal">
+        <i class="fa fa-google"></i>
+        @T("Plugins.Misc.GoogleVisionProductTags.GenerateProductTags")
+    </button>
+</form>
+<script>
+    $(document).ready(function () {
+        $('body').append(`@Html.Raw((await Html.PartialAsync("~/Plugins/Misc.GoogleVisionProductTags/Views/TagsGeneration/_ConfirmationModal.cshtml")).ToHtmlString())`);
+        $('#googlevision-product-tags-confirmation-modal-cancel-button').bind('click', function () {
+            $('#googlevision-product-tags-confirmation-modal').toggle('modal');
+        });
+    });
+</script>

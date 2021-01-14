@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Misc",
+  "FriendlyName": "Google Cloud Vision product tags generation",
+  "SystemName": "Misc.GoogleVisionProductTags",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "D.B.",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Misc.GoogleVisionProductTags.dll",
+  "Description": "The plugin enables the generation of tags for products from their images using Google Cloud Vision API label detection"
+}
